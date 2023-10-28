@@ -49,7 +49,7 @@ chmod +x destroyContainers.sh
 O aplicativo permite criar e salvar produtos do tipo "Água" 💧 ou "Refrigerante" 🥤 no MongoDB 🍃 e utiliza o RabbitMQ 🐇 para comunicação assíncrona.
 
 ###### Criar um Produto 🛍️
-Para criar um produto, você pode enviar uma solicitação POST para o endpoint /api/produto/salvar com um JSON no corpo da solicitação. Aqui estão exemplos de JSON para criar um produto "Água" ou "Refrigerante":
+Para criar um produto, você pode enviar uma solicitação POST para o endpoint /api/produto com um JSON no corpo da solicitação. Aqui estão exemplos de JSON para criar um produto "Água" ou "Refrigerante":
 
 ###### Exemplo de JSON para criar um produto "Água" 💧:
 
@@ -72,8 +72,27 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "comAcucar": true
 }' http://localhost:8080/api/produtos```
 
-Os dados serão salvos no MongoDB e uma mensagem será enviada pelo RabbitMQ, que já está configurado com autoack. Para visualizar as mensagens, será necessário desligar o consumidor.
+Os dados serão salvos no MongoDB e uma mensagem será enviada pelo RabbitMQ, que já está configurado com autoack. Para visualizar as mensagens, será necessário desligar o consumer.
+
+<p align="center">
+  <img src="https://github.com/mkalmeida/aulas_bee_projeto_pratico3/assets/130864403/f7b15ee1-214d-47a5-b5fa-f079cabff5e6" alt="Imagem 1">
+</p>
+
+<p align="center">
+  <img src="https://github.com/mkalmeida/aulas_bee_projeto_pratico3/assets/130864403/b1c1f70d-b1ed-4edd-84cd-15713d69ef25" alt="Imagem 2">
+</p>
+
+<p align="center">
+  <img src="file:///home/michaella/Pictures/Screenshots/Screenshot%20from%202023-10-28%2019-50-38.png" alt="Imagem 3">
+</p>
+
+<p align="center">
+  <img src="file:///home/michaella/Pictures/Screenshots/Screenshot%20from%202023-10-28%2019-51-08.png" alt="Imagem 4">
+</p>
+
 
 Observação
 O atributo "tipo" não faz parte das classes de produtos (Água ou Refrigerante) e é um parâmetro criado no momento da ingestão de dados. Ele permite que os produtos do tipo "Água" 💧 e "Refrigerante" 🥤 sejam salvos em suas respectivas collections no MongoDB 🍃.
+
+
 
