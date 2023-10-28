@@ -76,3 +76,4 @@ Os dados serão salvos no MongoDB e uma mensagem será enviada pelo RabbitMQ, qu
 
 Observação
 O atributo "tipo" não faz parte das classes de produtos (Água ou Refrigerante) e é um parâmetro criado no momento da ingestão de dados. Ele permite que os produtos do tipo "Água" 💧 e "Refrigerante" 🥤 sejam salvos em suas respectivas collections no MongoDB 🍃.
+
